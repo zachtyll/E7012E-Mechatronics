@@ -4,13 +4,13 @@ Servo SteeringServo;     // Servo object Servo
 Servo MotorServo;
 
 // Steering
-int ServoPin = 9;             // Control pin for steering servo
+int SteeringPin = 9;             // Control pin for steering servo
 int minPulseSteering = 1300;  // Smallest pulse and
 int maxPulseSteering = 1800;  // largest pulse for steering servo.
 
 
 // Speed
-int ServoMotorPin = 8;    // Control pin for motor servo
+int MotorPin = 8;    // Control pin for motor servo
 int minPulseMotor = 0;    // Smallest pulse and
 int maxPulseMotor = 1000; // largest pulse for motor servo
 
@@ -21,15 +21,21 @@ void setup() {
 
   Serial.begin(9600);   // Setup a serial connection for debugging.
 
-  // initialize the steering servo signal pin as an OUTPUT
-  //(pin, min pulse width, max pulse width in microseconds)
-  // set servo at 90 degrees from 0-180
-  pinMode(ServoPin, OUTPUT);                      
-  SteeringServo.attach(ServoPin,minPulseSteering,maxPulseSteering);       
-  SteeringServo.writeMicroseconds(1550);                  
+  pinMode(SteeringPin, OUTPUT);              // initialize the steering control pin as an OUTPUT                
+  SteeringServo.attach(
+    SteeringPin,                             // Set the control pin for the steering servo
+    minPulseSteering,                     // Set the min and
+    maxPulseSteering);                    // max value for the servo.
+  SteeringServo.writeMicroseconds(1550);  // Home the steering servo to 0.0 (1550).                
 
-  MotorServo.attach(ServoMotorPin, minPulseMotor, maxPulseMotor);
-  MotorServo.writeMicroseconds(500);
+  // Setup Motor
+  pinMode(MotorPin, OUTPUT);              // initialize the motor control pin as an OUTPUT 
+  MotorServo.attach(                      
+    MotorPin,                        // Set the control pin for the steering servo
+    minPulseMotor,                        // Set the min and
+    maxPulseMotor);                       // max value for the servo.
+  MotorServo.writeMicroseconds(0);        // Turn the motor off.
+  
   Serial.println("Setup completed!");
   delay(1000);
 }
