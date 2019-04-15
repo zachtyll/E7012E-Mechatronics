@@ -3,22 +3,20 @@
 Servo SteeringServo;     // Servo object Servo
 Servo MotorServo;
 
+// Steering
 int ServoValue;           // Analog input value Servo
-int ServoPin = 9;         // Control pin for servo motor
+int ServoPin = 9;         // Control pin for steering servo motor
+int maxPulseSteering = 1800;
+int minPulseSteering = 1300;
 
+// Speed
 int ServoMotorValue;
-int ServoMotorPin = 8;
-
-int minPulse = 1000;    // Minimum servo position
-int maxPulse = 2000;    // Maximum servo position
-
+int ServoMotorPin = 8;    // Control pin for motor servo
 int minPulseMotor = 0;
 int maxPulseMotor = 1000;
 
-int pos = 0;
-int analogread = A0;
-int maxPulseSteering = 1800;
-int minPulseSteering = 1300;
+int steeringPos = A0;
+float oldAngle = 0.0;
 
 void setup() {
 
