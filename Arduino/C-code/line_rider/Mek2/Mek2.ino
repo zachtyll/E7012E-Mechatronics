@@ -6,11 +6,12 @@ Servo MotorServo;                       // Servo object Motorcontrol
 
 int hallIsrLeft = 5;
 int hallIsrRight = 6;
-float circ=0.065*3.14;                  //circumference of wheeel
-float vel=0;
-float lastTime=0;
-float timevel;
-float lastVel;
+float circumference = 0.065*3.14;                  //circumference of wheel
+float hallVelocity = 0;
+float lastTime = 0;
+float hallPeriod = 0;
+float currentTime = 0;
+float lastVelocity;
 float angle = 0.75;                      // Steering angle -1 is left 0 is straigth and 1 is right. X100 for % 
 float mps = 0.75;                        // Engine speed where 0 is standing still and 1 is full throttle
 
@@ -20,7 +21,7 @@ void setup() {
   
   Serial.begin(9600);
   pinMode(LED_BUILTIN, OUTPUT);
-  attachInterrupt(digitalPinToInterrupt(hallIsrLeft), blink1, FALLING);
+  attachInterrupt(digitalPinToInterrupt(hallIsrLeft), Sensor, FALLING);
   attachInterrupt(digitalPinToInterrupt(hallIsrRight), blink2, FALLING);
   //interrupts();
                                              // Sets the data rate in bits per second (baud) for serial data transmission.
@@ -33,8 +34,7 @@ void loop() {
 //  digitalWrite(3, HIGH);
 //  delay(1000);
 //  digitalWrite(3, LOW);
-//  digitalWrite(ISR_pin, HIGH);
-
+//  digitalWrite(ISR_pin, HIGH);    
 //  SetSpeed(mps);                               //Makes function for running the motortab        
 //  SetSteering(angle);                            //Makes function for running the servotab
 //  angle = 0.5;
@@ -48,7 +48,6 @@ void loop() {
 
 void blink1() {
   Serial.println("blink 1!");
-  state = !state;
 }
 
 void blink2() {

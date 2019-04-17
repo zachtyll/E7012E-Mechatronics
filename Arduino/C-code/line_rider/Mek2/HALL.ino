@@ -1,14 +1,15 @@
 void Sensor(){
-    Serial.println("Sensor TRIGGERED!");
-    if (millis()!=lastTime){
-      timevel=(millis()-lastTime)*1000;
-      vel=circ*0.5/timevel;
-      lastTime=millis();
-      lastVel=vel;}    
+    if (millis()!= lastTime){
+      currentTime = millis();
+      hallPeriod = (currentTime - lastTime) / 1000;
+      hallVelocity = circumference * 0.5 / hallPeriod;
+      Serial.println(hallVelocity);
+      lastTime = millis();
+      lastVelocity = hallVelocity;
+    }    
 }
 void LastVelocity(){
-  Serial.println("oTHER TRIGGERED!");
-  if (lastVel!=vel) {
-  Serial.println(vel);
+  if (lastVelocity!= hallVelocity) {
+  Serial.println(hallVelocity);
   }
 }
