@@ -1,4 +1,4 @@
-#include <PID_v1.h>
+#include <PID_v1.h>                     
 #include <Servo.h>                      //include the servo library
 
 Servo SteeringServo;                    // Servo object Servo
@@ -15,12 +15,12 @@ void setup() {
   delay(1000);
 }
 void loop() {
-  SetSpeed();                               //Makes function for running the motortab        
-  SetSteering();                            //Makes function for running the servotab
-
+  SetSpeed(mps);                               //Makes function for running the motortab        
+  SetSteering(angle);                            //Makes function for running the servotab
+  
   delay(3000);                              //demonstration time of 3 sek until reset below                      
   MotorServo.writeMicroseconds(1200);       //set speed to 0
-  SteeringServo.writeMicroseconds(1550);    //set steering straigth 
+  SteeringServo.writeMicroseconds(1550);    //set steering straight 
   delay(2000);                              //Keep it zero for 2 sek until showing desierd values again.
 }
 
