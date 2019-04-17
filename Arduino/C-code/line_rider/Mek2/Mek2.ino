@@ -9,8 +9,8 @@ float mps = 0.75;                        // Engine speed where 0 is standing sti
 
 void setup() {
   Serial.begin(9600);                        // Sets the data rate in bits per second (baud) for serial data transmission.
-  Motorsetup();                              // Engine function to tab for setup
-  servosetup();                              // Servo function to tab for setup
+  MotorSetup();                              // Engine function to tab for setup
+  ServoSetup();                              // Servo function to tab for setup
   Serial.println("Setup completed!");
   delay(1000);
 }

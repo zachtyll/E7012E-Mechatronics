@@ -9,7 +9,7 @@ float mpsR = 420.0;           //engine range from zero to max
 float mpsM = 1580.0;          //calibrated zero engine speed
 float speedval = 0.0;         //Define speedscaling value
 
-void Motorsetup(){
+void MotorSetup(){
   pinMode(ServoMotorPin, OUTPUT);                                 //Initialize the motorsignalpin as an OUTPUT
   MotorServo.attach(ServoMotorPin, minPulseMotor, maxPulseMotor); //(pin, min pulse width, max pulse width in microseconds)
 }
@@ -20,4 +20,3 @@ void SetSpeed(){
   Serial.println(speedval);               //Display value of engine speed
   delay(15); 
 }
-
