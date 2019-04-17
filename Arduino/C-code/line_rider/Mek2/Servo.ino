@@ -14,7 +14,7 @@ void ServoSetup(){
   pinMode(ServoPin, OUTPUT);                              //Initialize the Servosignalpin as an OUTPUT
   SteeringServo.attach(ServoPin,minPulse,maxPulse);       //(pin, min pulse width, max pulse width in microseconds)
   SteeringServo.writeMicroseconds(1550);
-  Serial.println("Servo setup completed!);
+  Serial.println("Servo setup completed!");
 }  
 void SetSteering(float angle){
   steerAmplitude = calibratedMid + steerRange * angle;    //Steering value multiplied to scale with servo
