@@ -1,7 +1,7 @@
 #include <Servo.h>
 
 
-int ServoPin = 9;       // Control pin for servo motor
+
 int minPulse = 1000;    // Minimum servo position
 int maxPulse = 2000;    // Maximum servo position
 
@@ -19,9 +19,9 @@ void ServoSetup(){
 void SetSteering(float angle){
   steerAmplitude = calibratedMid + steerRange * angle;    //Steering value multiplied to scale with servo
   SteeringServo.writeMicroseconds(steerAmplitude);        //Send steering in microsecounds(pulse) to output pin
-  Serial.println(steerAmplitude);                         //display value used
-  Serial.println(15 + 1000 + oldAngle);
+  //Serial.println(steerAmplitude);                         //display value used
+  //Serial.println(15 + 1000 + oldAngle);
   delay(15 + 1000 * oldAngle);
-  Serial.println(15 + 1000 * oldAngle);                     //display value used
+  //Serial.println(15 + 1000 * oldAngle);                     //display value used
   oldAngle = angle;
 }

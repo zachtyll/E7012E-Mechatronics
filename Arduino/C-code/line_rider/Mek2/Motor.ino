@@ -1,7 +1,6 @@
 #include <Servo.h>
 
 
-int ServoMotorPin = 8;        //Pin for motor
 int minPulseMotor = 1000;     //Motor min pulse
 int maxPulseMotor = 2000;     //Motor max pulse
 
