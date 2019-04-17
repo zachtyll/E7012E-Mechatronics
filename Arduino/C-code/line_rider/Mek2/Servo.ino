@@ -14,12 +14,14 @@ void ServoSetup(){
   pinMode(ServoPin, OUTPUT);                              //Initialize the Servosignalpin as an OUTPUT
   SteeringServo.attach(ServoPin,minPulse,maxPulse);       //(pin, min pulse width, max pulse width in microseconds)
   SteeringServo.writeMicroseconds(1550);
+  Serial.println("Servo setup completed!);
 }  
 void SetSteering(float angle){
   steerAmplitude = calibratedMid + steerRange * angle;    //Steering value multiplied to scale with servo
   SteeringServo.writeMicroseconds(steerAmplitude);        //Send steering in microsecounds(pulse) to output pin
   Serial.println(steerAmplitude);                         //display value used
+  Serial.println(15 + 1000 + oldAngle);
   delay(15 + 1000 * oldAngle);
   Serial.println(15 + 1000 * oldAngle);                     //display value used
-  oldAngle = steerAmplitude;
+  oldAngle = angle;
 }

@@ -15,8 +15,10 @@ void setup() {
   delay(1000);
 }
 void loop() {
-  SetSpeed(mps);                               //Makes function for running the motortab        
+  //SetSpeed(mps);                               //Makes function for running the motortab        
   SetSteering(angle);                            //Makes function for running the servotab
+  angle = 0.5;
+  SetSteering(angle);
   
   delay(3000);                              //demonstration time of 3 sek until reset below                      
   MotorServo.writeMicroseconds(1200);       //set speed to 0
