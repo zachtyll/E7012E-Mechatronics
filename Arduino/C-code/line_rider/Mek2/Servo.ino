@@ -15,9 +15,8 @@ void servosetup(){
   SteeringServo.writeMicroseconds(1550);
 }  
 void SetSteering(){
-  steerA = caliMid + steerR * angel;              //Steering value multiplied to scale with servo
+  steerA = caliMid + steerR * angle;              //Steering value multiplied to scale with servo
   SteeringServo.writeMicroseconds(steerA);        //Send steering in microsecounds(pulse) to output pin
   Serial.println(steerA);                        //display value used
   delay(15);
 }
-

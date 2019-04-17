@@ -1,10 +1,10 @@
 #include <PID_v1.h>
-#include <Servo.h>                      //includ the servo library
+#include <Servo.h>                      //include the servo library
 
 Servo SteeringServo;                    // Servo object Servo
 Servo MotorServo;                       // Servo object Motorcontroll
 
-float angel = 0.75;                      // Steering angel -1 is left 0 is straigth and 1 is right. X100 for % 
+float angle = 0.75;                      // Steering angle -1 is left 0 is straigth and 1 is right. X100 for % 
 float mps = 0.75;                        // Engine speed where 0 is standing still and 1 is full throttle
 
 void setup() {
