@@ -1,23 +1,21 @@
 float hallVelocity = 0;
-float lastTime = 0;
+float previousTime = 0;
 float hallPeriod = 0;
-float currentTime = 0;
-float lastVelocity;
+float previousVelocity = 0;
+const float circumference = 0.065* 3.14;    //circumference of wheel
 
 void Sensor(){
-    if (millis()!= lastTime){
-      currentTime = millis();
-      hallPeriod = (currentTime - lastTime) / 1000;
-      hallVelocity = circumference * 0.5 / hallPeriod;
-      Serial.println(hallVelocity);
-      lastTime = millis();
-      lastVelocity = hallVelocity;
-      Serial.print("Speed: ");
-      Serial.println(hallVelocity);
-    }
+  if (millis()!= previousTime){
+    hallPeriod = (millis() - previousTime) / 1000;    // Calculates the time since last trigger of the sensor.
+    hallVelocity = circumference * 0.5 / hallPeriod;  // Calculates the speed the car has reached.
+    previousTime = millis();
+    previousVelocity = hallVelocity;
+    Serial.print("Speed: ");
+    Serial.println(hallVelocity);
+  }
 }
 void LastVelocity(){
-  if (lastVelocity!= hallVelocity) {
+  if (previousVelocity!= previousVelocity) {
   Serial.println(hallVelocity);
   }
 }

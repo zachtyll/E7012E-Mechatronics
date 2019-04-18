@@ -6,9 +6,9 @@ int minPulse = 1000;    // Minimum servo position
 int maxPulse = 2000;    // Maximum servo position
 
 float calibratedMid = 1550.0;     //Calibrated mid value
-float steerRange = 250.0;       //Steering range
+const float steerRange = 250.0;       //Steering range
 float steerAmplitude = 0.0;         // define steeringscaling value
-float oldAngle = steerAmplitude;
+float oldAngle = 0.0;
 
 void ServoSetup(){
   pinMode(ServoPin, OUTPUT);                              //Initialize the Servosignalpin as an OUTPUT
