@@ -5,7 +5,7 @@ This repository contains work done for the course E7012E - Mechatronics at LTU S
 The task is to build an automated guided vehicle or AGV. The vehicle should be able to follow along a line track without deviating and within a set time.
 
 ### The Team
-The team consists of Julius Lundberg, Jonathan Myrsell, Ivar Rockström, Alejandro Salvador, Anton Sundström och Zacharias Tyllström. 
+The team consists of Julius Lundberg, Jonathan Myrsell, Ivar Rockström, Alejandro Salvador, Anton Sundström and Zacharias Tyllström. 
 
 ### The AGV
 The tasks the team were set out to solve were to design and construct a
