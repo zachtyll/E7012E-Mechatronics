@@ -1,4 +1,4 @@
-float hallVelocity = 0;
+double hallVelocity = 0;
 float previousTime = 0;
 float hallPeriod = 0;
 float previousVelocity = 0;
@@ -10,12 +10,10 @@ void Sensor(){
     hallVelocity = circumference * 0.5 / hallPeriod;  // Calculates the speed the car has reached.
     previousTime = millis();                          // Set previous time for next loop
     previousVelocity = hallVelocity;                  // Set previous velocity for next loop
-    Serial.print("Speed: ");                          // Print
-    Serial.println(hallVelocity);                     // Print speed 
   }
 }
 void LastVelocity(){
   if (previousVelocity!= hallVelocity) {        
-  Serial.println(previousVelocity);
+  //Serial.println(previousVelocity);
   }
 }

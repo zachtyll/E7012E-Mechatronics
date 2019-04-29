@@ -1,5 +1,5 @@
 void IsrSetup() {
-  attachInterrupt(digitalPinToInterrupt(hallIsrLeft), Sensor, FALLING);
-  attachInterrupt(digitalPinToInterrupt(hallIsrRight), blink2, FALLING);
-  Serial.println("ISR setup completed!");
+  attachInterrupt(digitalPinToInterrupt(hallIsrRight), Sensor, FALLING);     // Interrupt for left hall sensor, runs "Sensor"
+  
+  //Serial.println("ISR setup completed!");                                   
 }
