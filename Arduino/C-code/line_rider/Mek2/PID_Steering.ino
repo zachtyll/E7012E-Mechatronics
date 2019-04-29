@@ -1,17 +1,15 @@
-
 #include <PID_v1.h>
 
 //Specify the links and initial tuning parameters
-double KpStear=0.1, KiStear=0.75, KdStear=0;
-PID StearingPID(&SensorArray, &angle, &SetStear, KpStear, KiStear, KdStear, DIRECT);
+double KpSteer=0.1, KiSteer=0.75, KdSteer=0;
+PID SteeringPID(&SensorArray, &angle, &SetSteer, KpSteer, KiSteer, KdSteer, DIRECT);
 
-void PidStearSetup(){
+void PidSteerSetup(){
   //turn the PID on
-  StearingPID.SetMode(AUTOMATIC);
-  //Serial.println("PID-Speed setup completed!");
+  SteeringPID.SetMode(AUTOMATIC);
 }
 
-void PidStear(){
-  StearingPID.Compute();
+void PidSteer(){
+  SteeringPID.Compute();
 
 }

@@ -8,7 +8,7 @@ void Printtab(){
 //  Serial.println(speedval);
 //  Serial.print("output:");
 //  Serial.println(mps);
-//  Serial.print("Stearing angle");
+//  Serial.print("Steering angle");
 //  Serial.println(SensorArray);
   Serial.print(digitalRead(PhotoTrans1));
   Serial.print(digitalRead(PhotoTrans2));

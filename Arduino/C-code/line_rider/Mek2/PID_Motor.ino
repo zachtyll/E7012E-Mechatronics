@@ -12,7 +12,6 @@ PID TheSpeedPID(&hallVelocity, &mps, &SetpointSpeed, Kp, Ki, Kd, DIRECT);
 void PidSetup(){
   //turn the PID on
   TheSpeedPID.SetMode(AUTOMATIC);
-  //Serial.println("PID-Speed setup completed!");
 }
 
 void PidSpeed(){
