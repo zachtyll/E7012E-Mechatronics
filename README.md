@@ -5,9 +5,11 @@ This repository contains work done for the course E7012E - Mechatronics at LTU S
 
 Some basic Git commands are:
 ```
+git pull
 git status
 git add
 git commit
+git push
 ```
 use `git pull` to get the changes of the current repository. Make sure you are at the latest version of the repository before making changes.
 use `git status` to check the status of modified files.
