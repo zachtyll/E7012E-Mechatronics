@@ -1,11 +1,11 @@
 #include <Servo.h>
 
 
-int minPulseMotor = 1000;     //Motor min pulse
-int maxPulseMotor = 2000;     //Motor max pulse
+const int minPulseMotor = 1000;     //Motor min pulse
+const int maxPulseMotor = 2000;     //Motor max pulse
 
-float mpsRange = 420.0;       //engine range from zero to max
-float mpsZero = 1500.0;       //calibrated zero engine speed
+const float mpsRange = 420.0;       //engine range from zero to max
+const float mpsZero = 1500.0;       //calibrated zero engine speed
 float speedval = 0.0;         //Define speedscaling value
 
 void MotorSetup(){

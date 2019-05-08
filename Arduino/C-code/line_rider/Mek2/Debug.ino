@@ -4,20 +4,20 @@ void Printtab(){
 //  Serial.print(",");
 //  Serial.println(mps);
 
-//  Serial.print("Speed: ");                          // Print
+//  Serial.print("Speed: ");
 //  Serial.println(speedval);
 //  Serial.print("output:");
 //  Serial.println(mps);
 //  Serial.print("Steering angle");
 //  Serial.println(SensorArray);
-  Serial.print(digitalRead(PhotoTrans1));
-  Serial.print(digitalRead(PhotoTrans2));
-  Serial.print(digitalRead(PhotoTrans3));
-  Serial.print(digitalRead(PhotoTrans4));
-  Serial.print(digitalRead(PhotoTrans5));
-  Serial.print(digitalRead(PhotoTrans6));
-  Serial.print(digitalRead(PhotoTrans7));
-  Serial.println(digitalRead(PhotoTrans8));
+  Serial.print(PTSens[0]);
+  Serial.print(PTSens[1]);
+  Serial.print(PTSens[2]);
+  Serial.print(PTSens[3]);
+  Serial.print(PTSens[4]);
+  Serial.print(PTSens[5]);
+  Serial.print(PTSens[6]);
+  Serial.println(PTSens[7]);
 //  Serial.print(angle);
 //  Serial.print(",");
 //  Serial.println(SensorArray);

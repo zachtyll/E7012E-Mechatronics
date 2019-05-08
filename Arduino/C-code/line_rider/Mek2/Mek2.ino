@@ -7,6 +7,8 @@
 Servo SteeringServo;                  // Servo object Servo
 Servo MotorServo;                     // Servo object Motorcontrol
 
+int PTSens[8]={0,0,0,0,0,0,0,0};
+
 double angle = 0;                     // Steering angle -1 is left 0 is straight and 1 is right. X100 for % 
 double mps = 0.0;                     // Engine speed where 0 is standing still and 1 is full throttle
 
@@ -30,8 +32,8 @@ const int ServoSteeringPin = 11;      // Pin 11: Steering control.
 //const int hallIsrLeft = 12;         // Pin 12: Left Hall sensor.
 const int hallIsrRight = 13;          // Pin 13: Right Hall sensor.
 
-double SetSteer = 0;                    // Setpoint for steering
-double SensorArray = 0;                 //Sum of all hall-sensor. Value used for stearing
+double SetSteer = 0;                  // Setpoint for steering
+double SensorArray = 0;               //Sum of all hall-sensor. Value used for stearing
 
 void setup() {
   Serial.begin(9600);
@@ -52,5 +54,6 @@ void setup() {
 
 void loop() {
   delay(100);
+  Serial.println("Zoom in i main!");
   yield();
 }

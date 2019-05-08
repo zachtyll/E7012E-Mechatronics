@@ -1,5 +1,5 @@
 float PhotoTrans1Value=0;
-int PTSens[8]={0,0,0,0,0,0,0,0};
+
 float LastSensorArray=0;
 
 void SensorArraySetup(){
