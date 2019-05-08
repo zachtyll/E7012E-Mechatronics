@@ -1,3 +1,6 @@
+// Include Scheduler since we want to manage multiple tasks.
+#include <Scheduler.h>
+
 #include <PID_v1.h>                     
 #include <Servo.h>                    //include the servo library
 
@@ -6,6 +9,8 @@ Servo MotorServo;                     // Servo object Motorcontrol
 
 double angle = 0;                     // Steering angle -1 is left 0 is straight and 1 is right. X100 for % 
 double mps = 0.0;                     // Engine speed where 0 is standing still and 1 is full throttle
+
+double hallVelocity = 0;
 
 double SetpointSpeed= 2;              // Setpoint for speed
 double SetpointStearing = 0;          // Setpoint for stearing
@@ -25,11 +30,11 @@ const int ServoSteeringPin = 11;      // Pin 11: Steering control.
 //const int hallIsrLeft = 12;         // Pin 12: Left Hall sensor.
 const int hallIsrRight = 13;          // Pin 13: Right Hall sensor.
 
-double SetSteer=0;                    // Setpoint for stearing
-double SensorArray=0;                 //Sum of all hall-sensor. Value used for stearing
+double SetSteer = 0;                    // Setpoint for steering
+double SensorArray = 0;                 //Sum of all hall-sensor. Value used for stearing
 
-void setup() { 
-  Serial.begin(9600);                 // Sets the data rate in bits per second (baud) for serial data transmission.
+void setup() {
+  Serial.begin(9600);
   IsrSetup();                         // Setup for ISR.  
   MotorSetup();                       // Setup for motor.
   ServoSetup();                       // Setup for steering servo.
@@ -37,29 +42,15 @@ void setup() {
   PidSetup();                         // Setup for PID_Speed
   PidSteerSetup();                    // Setup for stearing PID
   SetSpeed(mps);                      // Startsignal for ECU
-  //Serial.println("Turn on your ECU in 5");
-  delay(1000);
-  //Serial.println("Turn on your ECU in 4"); 
-  delay(1000);
-  //Serial.println("Turn on your ECU in 3"); 
-  delay(1000);
-  //Serial.println("Turn on your ECU in 2"); 
-  delay(1000);
-  //Serial.println("Turn on your ECU in 1"); 
-  delay(1000);
-  
-  //Serial.println("Setup completed!");
-  delay(1000);
-}
-void loop() {  
-  SetSpeed(mps);      // Makes function for running the motortab        
-  SetSteering(angle); // Makes function for running the servotab
-  ReadPhotoTrans();   // Reads phototransistors high/low and calculates stearing value (non pidded)
-  PidSpeed();         // 
-  PidSteer();         // 
 
-   
-  Printtab();         //
+  Scheduler.startLoop(ReadPhotoTrans);    // Add ReadPhotoTrans to Schedule
+  Scheduler.startLoop(PidSpeed);          // Add PidSpeed to Schedule
+  //Scheduler.startLoop(PidSteer);        // Add PidSteer to Schedule
+  Scheduler.startLoop(Printtab);          // Yada yada...
+  Scheduler.startLoop(SetSteering);
 }
 
-  
+void loop() {
+  delay(100);
+  yield();
+}

@@ -14,9 +14,10 @@ void ServoSetup(){
   SteeringServo.writeMicroseconds(1550);
   //Serial.println("Servo setup completed!");
 }  
-void SetSteering(float angle){
-  steerAmplitude = calibratedMid + steerRange * angle;    //Steering value multiplied to scale with servo
+void SetSteering(){
+  steerAmplitude = calibratedMid + steerRange * SensorArray;    //Steering value multiplied to scale with servo
   SteeringServo.writeMicroseconds(steerAmplitude);        //Send steering in microsecounds(pulse) to output pin
-  delay(15 + 1000 * oldAngle);
-  oldAngle = angle;
+  //delay(15 + 1000 * oldAngle);
+  oldAngle = SensorArray;
+  delay(150);
 }

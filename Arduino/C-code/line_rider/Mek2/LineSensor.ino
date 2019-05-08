@@ -22,16 +22,15 @@ void ReadPhotoTrans(){
   PTSens[5] = digitalRead(PhotoTrans6);
   PTSens[6] = digitalRead(PhotoTrans7);
   PTSens[7] = digitalRead(PhotoTrans8); //Most left sensor in traveling direction
-
   
   LastSensorArray=SensorArray;                                                                                                                                  // Last know SenorArray value
+  SensorArray = PTSens[0]*(1) + PTSens[1]*(0.75) + PTSens[2]*(0.50) + PTSens[3]*(0.25) + PTSens[4]*(-0.25) + PTSens[5]*(-0.50) + PTSens[6]*(-0.75) + PTSens[7]*(-1);  // Summation of the active sensors with its distance to normal
   
-  SensorArray = PTSens[0]*(1) + PTSens[1]*(0.5) + PTSens[2]*(0.3) + PTSens[3]*(0.1) + PTSens[4]*(-0.1) + PTSens[5]*(-0.3) + PTSens[6]*(-0.5) + PTSens[7]*(-1);  // Summation of the active sensors with its distance to normal
   if (SensorArray == 0){
     SensorArray = LastSensorArray;                                                                                                                              //If no sensor is active, take last know value of SensorArray
     }
   else{
      SensorArray = SensorArray /(PTSens[0] + PTSens[1] + PTSens[2] + PTSens[3] + PTSens[4] + PTSens[5] + PTSens[6] + PTSens[7]);                                // Mean value of the active sensors 
-     angle=SensorArray; 
       } 
+  delay(100);
   }
