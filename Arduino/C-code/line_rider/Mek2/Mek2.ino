@@ -14,7 +14,7 @@ double SetpointStearing = 0;          // Setpoint for stearing
                                       // Pin 1: Reserved for Bluetooth.
 const int PhotoTrans1 = 2;            // Pin 2: Phototransistor1
 const int PhotoTrans2 = 3;            // Pin 3: Phototransistor2
-const int PhotoTrans3 = 4;            // Pin 4: Phototransistor3
+const int PhotoTrans3 = 1;            // Pin 4: Phototransistor3
 const int PhotoTrans4 = 5;            // Pin 5: Phototransistor4
 const int PhotoTrans5 = 6;            // Pin 6: Phototransistor5
 const int PhotoTrans6 = 7;            // Pin 7: Phototransistor6
@@ -25,8 +25,8 @@ const int ServoSteeringPin = 11;      // Pin 11: Steering control.
 //const int hallIsrLeft = 12;         // Pin 12: Left Hall sensor.
 const int hallIsrRight = 13;          // Pin 13: Right Hall sensor.
 
-double SetSteer=0;
-double SensorArray=0;
+double SetSteer=0;                    // Setpoint for stearing
+double SensorArray=0;                 //Sum of all hall-sensor. Value used for stearing
 
 void setup() { 
   Serial.begin(9600);                 // Sets the data rate in bits per second (baud) for serial data transmission.
@@ -47,6 +47,7 @@ void setup() {
   delay(1000);
   //Serial.println("Turn on your ECU in 1"); 
   delay(1000);
+  
   //Serial.println("Setup completed!");
   delay(1000);
 }
