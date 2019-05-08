@@ -12,8 +12,3 @@ void Sensor(){
     previousVelocity = hallVelocity;                  // Set previous velocity for next loop
   }
 }
-void LastVelocity(){
-  if (previousVelocity!= hallVelocity) {        
-  //Serial.println(previousVelocity);
-  }
-}

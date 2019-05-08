@@ -4,7 +4,7 @@ void Printtab(){
 //  Serial.print(",");
 //  Serial.println(mps);
 
-//  Serial.print("Speed: ");                          // Print
+//  Serial.print("Speed: ");
 //  Serial.println(speedval);
 //  Serial.print("output:");
 //  Serial.println(mps);
