@@ -1,4 +1,4 @@
-double hallVelocity = 0;
+
 float previousTime = 0;
 float hallPeriod = 0;
 float previousVelocity = 0;

@@ -16,5 +16,5 @@ void PidSetup(){
 
 void PidSpeed(){
   TheSpeedPID.Compute();
-
+  delay(100);
 }
