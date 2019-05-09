@@ -1,8 +1,3 @@
-/********************************************************
- * PID Basic Example
- * Reading analog input 0 to control analog PWM output 3
- ********************************************************/
-
 #include <PID_v1.h>
 
 //Specify the links and initial tuning parameters
@@ -16,5 +11,5 @@ void PidSetup(){
 
 void PidSpeed(){
   TheSpeedPID.Compute();
-  delay(100);
+  delay(prio1);
 }
