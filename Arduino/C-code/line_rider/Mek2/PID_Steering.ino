@@ -1,15 +1,18 @@
-#include <PID_v1.h>
-
-//Specify the links and initial tuning parameters
-double KpSteer=1, KiSteer=0, KdSteer=0;
-PID SteeringPID(&SensorArray, &angle, &SetSteer, KpSteer, KiSteer, KdSteer, DIRECT);
+// Specify the links and initial tuning parameters
+double KpSteer=2.5, KiSteer=0.2, KdSteer=0;
+PID SteeringPID(&remapAlpha, &angle, &SetSteer, KpSteer, KiSteer, KdSteer, DIRECT);
 
 void PidSteerSetup(){
-  //turn the PID on
+  // Turn the PID on
+  SteeringPID.SetOutputLimits(-1, 1);
   SteeringPID.SetMode(AUTOMATIC);
 }
 
 void PidSteer(){
+//      Serial.print("remapAlpha: ");
+//      Serial.println(remapAlpha);
   SteeringPID.Compute();
-  delay(10);
+//      Serial.print("angle: ");
+//      Serial.println(angle);
+  delay(prio1);
 }
