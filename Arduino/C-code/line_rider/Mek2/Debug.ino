@@ -1,8 +1,8 @@
 
 void Printtab(){
-//  Serial.print(hallVelocity);
-//  Serial.print(",");
-//  Serial.println(mps);
+  Serial.print(hallVelocity);
+  Serial.print(",");
+  Serial.println(mps);
 
 //  Serial.print("Speed: ");
 //  Serial.println(hallVelocity);
@@ -21,9 +21,20 @@ void Printtab(){
 //  Serial.print(angle);
 //  Serial.print(",");
 //  Serial.println(SensorArray);
-  delay(prio4);
+
+//
+//  Serial5.print(hallVelocity);
+//  Serial5.print(",");
+//  Serial5.println(mps);
+  Serial5.print(PTSens[0]);
+  Serial5.print(PTSens[1]);
+  Serial5.print(PTSens[2]);
+  Serial5.print(PTSens[3]);
+  Serial5.print(PTSens[4]);
+  Serial5.print(PTSens[5]);
+  Serial5.print(PTSens[6]);
+  Serial5.println(PTSens[7]);
 
 
-
-  
+  delay(prio1);
 }
