@@ -37,7 +37,7 @@ void ReadPhotoTrans(){
       SensorArray = LastSensorArray;                                                                                                                              //If no sensor is active, take last know value of SensorArray
     }
   else{
-     SensorArray = SensorArray /SensorCheck;    // Mean value of the active sensors 
+     SensorArray = SensorArray / SensorCheck;    // Mean value of the active sensors 
       }
    // CALCULATION FOR ANGLE   
    alpha = atan((2*Lc*SensorArray)/((Lc+Ls)*(Lc+Ls)+SensorArray*SensorArray)); 
