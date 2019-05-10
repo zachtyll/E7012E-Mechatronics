@@ -15,15 +15,16 @@ const int prio4 = 400;
 
 int PTSens[8]={0,0,0,0,0,0,0,0};
 
-double angle = 0;                     // Steering angle -1 is left 0 is straight and 1 is right. X100 for % 
+double angle = 1;                     // Steering angle -1 is left 0 is straight and 1 is right. X100 for % 
 double mps = 0;                       // Engine speed where 0 is standing still and 1 is full throttle
 double SetSteer = 0;                  // Setpoint for steering
 double SensorArray = 0;               // Sum of all hall-sensor. Value used for stearing
+double remapAlpha = 1;                // 1 is forward.
 
 double hallVelocity = 0;
 
 // Setpoints PID
-double SetpointSpeed= 0.5;            // Setpoint for speed
+double SetpointSpeed= 0.50;            // Setpoint for speed
 double SetpointStearing = 1;          // Setpoint for steering
 
                                       // Pin 0: Reserved for Bluetooth.

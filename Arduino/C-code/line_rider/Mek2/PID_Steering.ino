@@ -1,5 +1,5 @@
 // Specify the links and initial tuning parameters
-double KpSteer=5, KiSteer=0, KdSteer=0;
+double KpSteer=1.5, KiSteer=0.4, KdSteer=0.6;
 PID SteeringPID(&remapAlpha, &angle, &SetSteer, KpSteer, KiSteer, KdSteer, DIRECT);
 
 void PidSteerSetup(){

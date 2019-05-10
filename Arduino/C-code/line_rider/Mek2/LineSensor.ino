@@ -5,7 +5,7 @@ float SensorCheck=0;
 const double Lc = 260;
 const double Ls = 112;
 double alpha = 0;
-double remapAlpha = 0;
+//double remapAlpha = 0;
 double constrainedRemapAlpha = 0;
 
 void SensorArraySetup(){
@@ -30,7 +30,7 @@ void ReadPhotoTrans(){
   PTSens[7] = digitalRead(PhotoTrans8); //Most left sensor in traveling direction
   
   LastSensorArray=SensorArray;                                                                                                                                  // Last know SenorArray value
-  SensorArray = PTSens[0]*(-127) + PTSens[1]*(-92) + PTSens[2]*(-57) + PTSens[3]*(-22) + PTSens[4]*(22) + PTSens[5]*(57) + PTSens[6]*(92) + PTSens[7]*(127);  // Summation of the active sensors with its distance to normal
+  SensorArray = PTSens[0]*(-127) + PTSens[1]*(-82) + PTSens[2]*(-40) + PTSens[3]*(-15) + PTSens[4]*(15) + PTSens[5]*(40) + PTSens[6]*(82) + PTSens[7]*(127);  // Summation of the active sensors with its distance to normal
   SensorCheck = PTSens[0] + PTSens[1] + PTSens[2] + PTSens[3] + PTSens[4] + PTSens[5] + PTSens[6] + PTSens[7];
   
   if (SensorCheck == 0){

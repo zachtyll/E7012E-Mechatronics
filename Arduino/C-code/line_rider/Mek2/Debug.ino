@@ -34,6 +34,8 @@ void Printtab(){
   Serial5.print(PTSens[5]);
   Serial5.print(PTSens[6]);
   Serial5.println(PTSens[7]);
+  Serial5.print("Error: ");
+  Serial5.println(SetpointStearing - remapAlpha);
 
 
   delay(prio1);

@@ -20,15 +20,4 @@ void SetSpeed(){
   speedval = constrain(speedval, minPulseMotor, maxPulseMotor);
   MotorServo.writeMicroseconds(speedval); //Send engine speed in microsecounds(pulse) to output pin
   delay(15); 
-
-
-  
-
-
-
-
-
-
-
-
 }

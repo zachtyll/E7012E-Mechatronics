@@ -20,8 +20,5 @@ void SetSteering(){
   steerAmplitude = minPulse + steerRange * angle;    //Steering value multiplied to scale with servo
   steerAmplitude = constrain(steerAmplitude, minPulse, maxPulse);
   SteeringServo.writeMicroseconds(steerAmplitude);              //Send steering in microsecounds(pulse) to output pin
-  //Serial.println(steerAmplitude);
-  //delay(15 + 1000 * oldAngle);
-  oldAngle = SensorArray;
-  delay(15);
+  delay(prio1);
 }
