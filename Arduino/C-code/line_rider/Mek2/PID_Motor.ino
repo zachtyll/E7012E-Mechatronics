@@ -4,7 +4,7 @@ PID SpeedPID(&hallVelocity, &mps, &SetpointSpeed1, Kp, Ki, Kd, DIRECT);
 
 void PidSetup(){
   // Turn the PID on
-//  SpeedPID.SetOutputLimits(1080, 1920);
+  //SpeedPID.SetSampleTime(1); 
   SpeedPID.SetMode(AUTOMATIC);
 }
 

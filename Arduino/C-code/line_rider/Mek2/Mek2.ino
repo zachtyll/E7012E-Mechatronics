@@ -22,7 +22,7 @@ double remapAlpha = 0;                // 0 is forward.
 double hallVelocity = 0;
 
 // Setpoints PID
-double SetpointSpeed= 0.85;           // Setpoint for speed
+double SetpointSpeed = 0.85;           // Setpoint for speed
 double SetpointSteering = 0;          // Setpoint for steering
 
                                       // Pin 0: Reserved for Bluetooth.

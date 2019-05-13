@@ -1,6 +1,6 @@
 // Define the aggressive and conservative tuning parameters.
-double aggKp = 2, aggKi = 0.8, aggKd = 0.4;
-double consKp = 2 , consKi = 0, consKd = 0;
+double aggKp = 2, aggKi = 0.4, aggKd = 0.2;
+double consKp = 2 , consKi = 0.4, consKd = 0.2;
 
 // Specify the links and initial tuning parameters.
 PID SteeringPID(&remapAlpha, &angle, &SetpointSteering, consKp, consKi, consKd, DIRECT);
@@ -13,22 +13,22 @@ void PidSteerSetup(){
 }
 
 void PidSteer(){
-  Serial5.print(remapAlpha);
-  Serial5.print(",");
-  Serial5.print(SetpointSteering);
-  Serial5.print(",");
-  Serial5.print(angle);
-  Serial5.println(",");
+//  Serial5.print(remapAlpha);
+//  Serial5.print(",");
+//  Serial5.print(SetpointSteering);
+//  Serial5.print(",");
+//  Serial5.print(angle);
+//  Serial5.println(",");
   double gap = (SetpointSteering + abs(remapAlpha));
-  if (gap < 0.5) 
+  if (gap < 0.50) 
   { // If the line is close to the set point, conservative values for PID
     SteeringPID.SetTunings(consKp, consKi, consKd);
-    Serial.println("CONS");
+    Serial5.println("CONS");
   }
   else
   { // If the line is close to the set point, aggressive values for PID
     SteeringPID.SetTunings(aggKp, aggKi, aggKd);
-    Serial.println("AGG");
+    Serial5.println("AGG");
   }
   SteeringPID.Compute();
   delay(prio1);
