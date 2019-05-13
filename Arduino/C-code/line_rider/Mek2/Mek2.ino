@@ -6,7 +6,7 @@
 
 Servo SteeringServo;                  // Servo object Servo
 Servo MotorServo;                     // Servo object Motorcontrol
-// Added for testing git branching
+
 // Prios for scheduling.
 const int prio1 = 1;                // Priority levels measured in ms.
 const int prio2 = 2;                // 1 is highest and n+1 is lowest.
@@ -17,15 +17,13 @@ int PTSens[8]={0,0,0,0,0,0,0,0};
 
 double angle = 1;                     // Steering angle -1 is left 0 is straight and 1 is right. X100 for % 
 double mps = 0;                       // Engine speed where 0 is standing still and 1 is full throttle
-double SetSteer = 0;                  // Setpoint for steering
 double SensorArray = 0;               // Sum of all hall-sensor. Value used for stearing
 double remapAlpha = 1;                // 1 is forward.
-
 double hallVelocity = 0;
 
 // Setpoints PID
-double SetpointSpeed= 0.85;            // Setpoint for speed
-double SetpointStearing = 1;          // Setpoint for steering
+double SetpointSpeed= 0.85;           // Setpoint for speed
+double SetpointSteering = 0;          // Setpoint for steering
 
                                       // Pin 0: Reserved for Bluetooth.
                                       // Pin 1: Reserved for Bluetooth.
@@ -65,7 +63,6 @@ void setup() {
 }
 
 void loop() {
-  delay(1);
-  //delay(prio1);
+  delay(prio1);
   yield();
 }

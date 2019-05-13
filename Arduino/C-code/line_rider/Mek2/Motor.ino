@@ -19,5 +19,5 @@ void SetSpeed(){
   speedval = mpsZero + (mpsRange * mps);    //engine value multiplied to scale with Esc speed
   speedval = constrain(speedval, minPulseMotor, maxPulseMotor);
   MotorServo.writeMicroseconds(speedval); //Send engine speed in microsecounds(pulse) to output pin
-  delay(15); 
+  delay(prio1); 
 }

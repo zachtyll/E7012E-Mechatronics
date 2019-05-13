@@ -41,14 +41,16 @@ void ReadPhotoTrans(){
   else{
      SensorArray = SensorArray / SensorCheck;    // Mean value of the active sensors 
       }
+      
    // CALCULATION FOR ANGLE   
    alpha = atan((2*Lc*SensorArray)/((Lc+Ls)*(Lc+Ls)+SensorArray*SensorArray)); 
 //   Serial.println(SensorArray);
-   remapAlpha = alpha*2.5;  // re-map of alpha from -0.4--0.4 to -1 -- 1
-   Serial.print(remapAlpha);
-   Serial.print(",");
-   SetpointSpeed1=SetpointSpeed*(1-abs(alpha/1.4));
-       
-  delay(1);
-  //delay(prio1);
+ //  remapAlpha = ;  // re-map of alpha from -0.4--0.4 to -1 -- 1
+   remapAlpha=constrain(alpha*2.5,-1,1);
+//   Serial.print(remapAlpha);
+//   Serial.print(",");
+   
+   // CALCULATION FOR BREAKING IN CORNERS
+   SetpointSpeed1 = SetpointSpeed * (1 - abs(alpha / 1.4));
+   delay(prio1);
   }

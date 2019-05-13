@@ -4,6 +4,7 @@ void Printtab(){
 //  Serial.print(",");
 //  Serial.println(mps);
 
+
 //  Serial.print("Speed: ");
 //  Serial.println(hallVelocity);
 //  Serial.print("output:");
@@ -18,11 +19,11 @@ void Printtab(){
 //  Serial.print(PTSens[5]);
 //  Serial.print(PTSens[6]);
 //  Serial.println(PTSens[7]);
-  //Serial.print("angle:");
-  //Serial.println(angle);
-//  Serial.print(",");
-//  Serial.println(SensorArray);
-
+//Serial.print("angle:");
+//
+////  Serial.print(",");
+//Serial.println(remapAlpha);
+//Serial.println(angle);
 //
 //  Serial5.print(hallVelocity);
 //  Serial5.print(",");
@@ -37,7 +38,5 @@ void Printtab(){
 //  Serial5.println(PTSens[7]);
 //  Serial5.print("Error: ");
 //  Serial5.println(SetpointStearing - remapAlpha);
-  
-
   delay(prio1);
 }

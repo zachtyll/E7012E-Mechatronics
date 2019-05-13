@@ -23,6 +23,5 @@ void SetSteering(){
   steerAmplitude = constrain(steerAmplitude, minPulse, maxPulse);
 //  Serial.println(steerAmplitude);
   SteeringServo.writeMicroseconds(steerAmplitude);              //Send steering in microsecounds(pulse) to output pin
-  delay(1);
-  //delay(prio1);
+  delay(prio1);
 }
