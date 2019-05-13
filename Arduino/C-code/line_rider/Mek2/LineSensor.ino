@@ -47,7 +47,7 @@ void ReadPhotoTrans(){
 //   Serial.println(SensorArray);
  //  remapAlpha = ;  // re-map of alpha from -0.4--0.4 to -1 -- 1
    remapAlpha=constrain(alpha*2.5,-1,1);
-//   Serial.print(remapAlpha);
+   Serial.println(remapAlpha);
 //   Serial.print(",");
    
    // CALCULATION FOR BREAKING IN CORNERS

@@ -19,7 +19,7 @@ void ServoSetup(){
 void SetSteering(){
 //  Serial.print("angle: ");
 //  Serial.println(angle);
-  steerAmplitude = minPulse + steerRange * angle;    //Steering value multiplied to scale with servo
+  steerAmplitude = calibratedMid + steerRange * angle;    //Steering value multiplied to scale with servo
   steerAmplitude = constrain(steerAmplitude, minPulse, maxPulse);
 //  Serial.println(steerAmplitude);
   SteeringServo.writeMicroseconds(steerAmplitude);              //Send steering in microsecounds(pulse) to output pin

@@ -15,10 +15,10 @@ const int prio4 = 4;
 
 int PTSens[8]={0,0,0,0,0,0,0,0};
 
-double angle = 1;                     // Steering angle -1 is left 0 is straight and 1 is right. X100 for % 
+double angle = 0;                     // Steering angle -1 is left 0 is straight and 1 is right. X100 for % 
 double mps = 0;                       // Engine speed where 0 is standing still and 1 is full throttle
 double SensorArray = 0;               // Sum of all hall-sensor. Value used for stearing
-double remapAlpha = 1;                // 1 is forward.
+double remapAlpha = 0;                // 0 is forward.
 double hallVelocity = 0;
 
 // Setpoints PID
