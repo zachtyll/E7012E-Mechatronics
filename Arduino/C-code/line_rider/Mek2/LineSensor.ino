@@ -7,6 +7,7 @@ const double Ls = 112;
 double alpha = 0;
 //double remapAlpha = 0;
 double constrainedRemapAlpha = 0;
+double SetpointSpeed1=0;
 
 void SensorArraySetup(){
     pinMode(PhotoTrans1, INPUT);
@@ -30,7 +31,8 @@ void ReadPhotoTrans(){
   PTSens[7] = digitalRead(PhotoTrans8); //Most left sensor in traveling direction
   
   LastSensorArray=SensorArray;                                                                                                                                  // Last know SenorArray value
-  SensorArray = PTSens[0]*(-127) + PTSens[1]*(-82) + PTSens[2]*(-40) + PTSens[3]*(-15) + PTSens[4]*(15) + PTSens[5]*(40) + PTSens[6]*(82) + PTSens[7]*(127);  // Summation of the active sensors with its distance to normal
+  SensorArray = PTSens[0]*(-127) + PTSens[1]*(-82) + PTSens[2]*(-40) + PTSens[3]*(-5) + PTSens[4]*(5) + PTSens[5]*(40) + PTSens[6]*(82) + PTSens[7]*(127);  // Summation of the active sensors with its distance to normal
+  //SensorArray = PTSens[0]*(-127) + PTSens[1]*(-90) + PTSens[2]*(-30) + PTSens[3]*(-10) + PTSens[4]*(10) + PTSens[5]*(30) + PTSens[6]*(90) + PTSens[7]*(127);  // Summation of the active sensors with its distance to normal
   SensorCheck = PTSens[0] + PTSens[1] + PTSens[2] + PTSens[3] + PTSens[4] + PTSens[5] + PTSens[6] + PTSens[7];
   
   if (SensorCheck == 0){
@@ -42,7 +44,11 @@ void ReadPhotoTrans(){
    // CALCULATION FOR ANGLE   
    alpha = atan((2*Lc*SensorArray)/((Lc+Ls)*(Lc+Ls)+SensorArray*SensorArray)); 
 //   Serial.println(SensorArray);
-   remapAlpha = alpha*2.5;  // re-map of alpha from -0.4--0.4 to 0 -- 2
+   remapAlpha = alpha*2.5;  // re-map of alpha from -0.4--0.4 to -1 -- 1
+   Serial.print(remapAlpha);
+   Serial.print(",");
+   SetpointSpeed1=SetpointSpeed*(1-abs(alpha/1.4));
        
-  delay(prio1);
+  delay(1);
+  //delay(prio1);
   }

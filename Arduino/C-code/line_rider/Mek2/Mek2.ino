@@ -8,10 +8,10 @@ Servo SteeringServo;                  // Servo object Servo
 Servo MotorServo;                     // Servo object Motorcontrol
 
 // Prios for scheduling.
-const int prio1 = 100;                // Priority levels measured in ms.
-const int prio2 = 200;                // 1 is highest and n+1 is lowest.
-const int prio3 = 300;                // e.g. for every 4 prio1 you get 1 prio4. 
-const int prio4 = 400;
+const int prio1 = 1;                // Priority levels measured in ms.
+const int prio2 = 2;                // 1 is highest and n+1 is lowest.
+const int prio3 = 3;                // e.g. for every 4 prio1 you get 1 prio4. 
+const int prio4 = 4;
 
 int PTSens[8]={0,0,0,0,0,0,0,0};
 
@@ -24,7 +24,7 @@ double remapAlpha = 1;                // 1 is forward.
 double hallVelocity = 0;
 
 // Setpoints PID
-double SetpointSpeed= 0.50;            // Setpoint for speed
+double SetpointSpeed= 0.85;            // Setpoint for speed
 double SetpointStearing = 1;          // Setpoint for steering
 
                                       // Pin 0: Reserved for Bluetooth.
@@ -65,6 +65,7 @@ void setup() {
 }
 
 void loop() {
-  delay(prio1);
+  delay(1);
+  //delay(prio1);
   yield();
 }

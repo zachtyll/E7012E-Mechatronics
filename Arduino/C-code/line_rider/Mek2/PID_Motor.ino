@@ -1,6 +1,6 @@
 // Specify the links and initial tuning parameters
-double Kp=0.1, Ki=0.2, Kd=0;
-PID SpeedPID(&hallVelocity, &mps, &SetpointSpeed, Kp, Ki, Kd, DIRECT);
+double Kp=0.07, Ki=0.2, Kd=0;
+PID SpeedPID(&hallVelocity, &mps, &SetpointSpeed1, Kp, Ki, Kd, DIRECT);
 
 void PidSetup(){
   // Turn the PID on
