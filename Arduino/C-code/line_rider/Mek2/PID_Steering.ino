@@ -13,31 +13,23 @@ void PidSteerSetup(){
 }
 
 void PidSteer(){
-//  
-//  Serial5.print(remapAlpha);
-//  Serial5.print(",");
-//  Serial5.print(SetpointSteering);
-//  Serial5.print(",");
-//  Serial5.print(angle);
-//  Serial5.println(",");
-//  double gap = (SetpointSteering - abs(remapAlpha));
-//  if (gap > 0.5) 
-//  { // If the line is close to the set point, conservative values for PID
-//    SteeringPID.SetTunings(consKp, consKi, consKd);
-////    Serial.println("CONS");
-//  }
-//  else
-//  { // If the line is close to the set point, aggressive values for PID
-//    SteeringPID.SetTunings(aggKp, aggKi, aggKd);
-////    Serial.println("AGG");
-//  }
-//  Serial.print("Gap: ");
-//  Serial.println(gap);
-  
-//      Serial.print("remapAlpha: ");
-//      Serial.println(remapAlpha);
+  Serial5.print(remapAlpha);
+  Serial5.print(",");
+  Serial5.print(SetpointSteering);
+  Serial5.print(",");
+  Serial5.print(angle);
+  Serial5.println(",");
+  double gap = (SetpointSteering + abs(remapAlpha));
+  if (gap < 0.5) 
+  { // If the line is close to the set point, conservative values for PID
+    SteeringPID.SetTunings(consKp, consKi, consKd);
+    Serial.println("CONS");
+  }
+  else
+  { // If the line is close to the set point, aggressive values for PID
+    SteeringPID.SetTunings(aggKp, aggKi, aggKd);
+    Serial.println("AGG");
+  }
   SteeringPID.Compute();
-     Serial.print("angle: ");
-     Serial.println(angle);
   delay(prio1);
 }

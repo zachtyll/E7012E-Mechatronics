@@ -1,7 +1,7 @@
 float previousTime = 0;
 float hallPeriod = 0;
 float previousVelocity = 0;
-const float circumference = 0.065* 3.14;    //circumference of wheel
+const float circumference = 0.065* 3.14;              //circumference of wheel
 
 void ReadHallSensor(){
   if (millis() > previousTime + 15){                  // Ensure no double detection by 'low-pass filtering'
