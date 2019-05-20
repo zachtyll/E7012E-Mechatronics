@@ -6,6 +6,7 @@
 
 Servo SteeringServo;                  // Servo object Servo
 Servo MotorServo;                     // Servo object Motorcontrol
+Servo ServoHead; 
 
 // Prios for scheduling.
 const int prio1 = 1;                // Priority levels measured in ms.
@@ -24,7 +25,7 @@ double remapAlpha = 1;                // 1 is forward.
 double hallVelocity = 0;
 
 // Setpoints PID
-double SetpointSpeed= 0.85;            // Setpoint for speed
+double SetpointSpeed= 0.85;           // Setpoint for speed
 double SetpointStearing = 1;          // Setpoint for steering
 
                                       // Pin 0: Reserved for Bluetooth.
@@ -39,7 +40,7 @@ const int PhotoTrans7 = 8;            // Pin 8: Phototransistor7
 const int PhotoTrans8 = 9;            // Pin 9: Phototransistor8
 const int ServoSteeringPin = 10;      // Pin 10: Steering control.
 const int ServoMotorPin = 11;         // Pin 11: Motor control.
-//const int hallIsrLeft = 12;         // Pin 12: Left Hall sensor.
+const int ServoHeadPin = 12;         // Pin 12: Left Hall sensor.
 const int hallIsrRight = 13;          // Pin 13: Right Hall sensor.
 
 

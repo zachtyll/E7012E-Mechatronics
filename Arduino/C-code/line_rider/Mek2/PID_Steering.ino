@@ -14,7 +14,7 @@ void PidSteer(){
 //      Serial.println(remapAlpha);
   SteeringPID.Compute();
 //     Serial.print("angle: ");
-     Serial.println(angle);
+//     Serial.println(angle);
   delay(1);
   //delay(prio1);
 }

@@ -1,7 +1,7 @@
 const int minPulseMotor = 1080;     //Motor min pulse
 const int maxPulseMotor = 1920;     //Motor max pulse
 
-const float mpsRange = 420.0;       //engine range from zero to max
+//const float mpsRange = 420.0;       //engine range from zero to max
 const float mpsZero = 1500.0;       //calibrated zero engine speed
 float speedval = 0.0;               //Define speedscaling value
 

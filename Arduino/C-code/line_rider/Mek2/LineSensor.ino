@@ -9,6 +9,13 @@ double alpha = 0;
 double constrainedRemapAlpha = 0;
 double SetpointSpeed1=0;
 
+
+
+double mpsRange=420;
+
+
+
+
 void SensorArraySetup(){
     pinMode(PhotoTrans1, INPUT);
     pinMode(PhotoTrans2, INPUT);
@@ -36,17 +43,18 @@ void ReadPhotoTrans(){
   SensorCheck = PTSens[0] + PTSens[1] + PTSens[2] + PTSens[3] + PTSens[4] + PTSens[5] + PTSens[6] + PTSens[7];
   
   if (SensorCheck == 0){
-      SensorArray = LastSensorArray;                                                                                                                              //If no sensor is active, take last know value of SensorArray
+      SensorArray = LastSensorArray;  //If no sensor is active, take last know value of SensorArray
+      //mpsRange=0;
     }
   else{
-     SensorArray = SensorArray / SensorCheck;    // Mean value of the active sensors 
+     SensorArray = SensorArray / SensorCheck;    // Mean value of the active sensors
       }
    // CALCULATION FOR ANGLE   
    alpha = atan((2*Lc*SensorArray)/((Lc+Ls)*(Lc+Ls)+SensorArray*SensorArray)); 
 //   Serial.println(SensorArray);
    remapAlpha = alpha*2.5;  // re-map of alpha from -0.4--0.4 to -1 -- 1
-   Serial.print(remapAlpha);
-   Serial.print(",");
+   //Serial.print(remapAlpha);
+   //Serial.print(",");
    SetpointSpeed1=SetpointSpeed*(1-abs(alpha/1.4));
        
   delay(1);
