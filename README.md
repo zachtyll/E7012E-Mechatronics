@@ -11,7 +11,7 @@ The team consists of Julius Lundberg, Jonathan Myrsell, Ivar Rockström, Alejand
 The tasks the team were set out to solve were to design and construct a
 - [x] Line sensor using the ITR20001-T photo transistor
 - [x] Hall sensor using the Hall Effect sensor SS441A, TO-92
-- [ ] Control a steering servo using PID
+- [x] Control a steering servo using PID
 - [x] Control a DC motor using PID
 
 
