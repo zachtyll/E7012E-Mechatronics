@@ -22,4 +22,8 @@ The line sensor uses the [ITR20001-T](https://cdn-shop.adafruit.com/product-file
 Each back wheel was equipped with a custom built Hall sensor. These measured the speed of the back tires.
 
 ### Microcontroller
+The AGV used an [Arduino M0 Pro](https://docs.arduino.cc/retired/boards/arduino-m0-pro) as the system processor.
 
+## Energy Supply
+The energy was routed to each component as described in the figure below.
+![The energy routing schematic.](E7012E-Mechatronics/docs/assets/power-schematic.png)
