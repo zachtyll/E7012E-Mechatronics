@@ -16,4 +16,4 @@ The tasks the team were set out to solve were to design and construct a
 - [x] Control a DC motor using PID
 
 ### Line Sensor Array
-The line sensor uses the ![ITR20001-T](https://cdn-shop.adafruit.com/product-files/3930/ITR20001-T.pdf) optical interrupter (OI) to sense a black line in the floor. This is done by emitting IR and recieving the bounching light in the OI. The amount of measured light indicates if there is a black surface under the OI. The team was able to construct a tuneable ADC and connect it to the microcontroller. This allowed for fast reading of the frequently updating OI.
+The line sensor uses the [ITR20001-T](https://cdn-shop.adafruit.com/product-files/3930/ITR20001-T.pdf) optical interrupter (OI) to sense a black line in the floor. This is done by emitting IR and recieving the bounching light in the OI. The amount of measured light indicates if there is a black surface under the OI. The team was able to construct a tuneable ADC and connect it to the microcontroller. This allowed for fast reading of the frequently updating OI.
