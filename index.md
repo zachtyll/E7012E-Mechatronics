@@ -27,3 +27,15 @@ The AGV used an [Arduino M0 Pro](https://docs.arduino.cc/retired/boards/arduino-
 ## Energy Supply
 The energy was routed to each component as described in the figure below.
 ![The energy routing schematic.](E7012E-Mechatronics/docs/assets/power-schematic.png)
+
+### Automatic Control Software
+The motor speed was regulated by a simple PI controller and used the hall sensors as its input measurement. The sensor array was used to determine the steering angle of the RC car. As this task was more sophisticated a PID controller was used. Several experimental tests were carried out in order to find the best gains for the PID controller.
+
+An additional feature that was implemented was that the RC car slowed down on tight turns, leading to less error in position due slippage of the wheels.
+
+### Decoration
+Due to the teams good humor, it was decided that the RC car shell was too dull and a more thematic hull was designed. Based on the classic game [Line Rider](https://en.wikipedia.org/wiki/Line_Rider). A small character was 3D-printed and a motor was connected to the base of its head in order to allow the prop to turn its head when cornering. Two eyes created from several LED lights accentuated the gaze of the charater. This added flair led to the RC car turning into a crowd favourite. Below is a picture of the RC car in action.
+![RC car dressed with a Line Rider themed shell.](E7012E-Mechatronics/docs/assets/line-rider.JPG)
+
+### Results
+The RC car performed adequately and placed on a fourth place in the time trials. Improvements for the future would be to tune the PID for the steering with a stronger theoretical foundation or to switch to a more advanced controller strategy.
