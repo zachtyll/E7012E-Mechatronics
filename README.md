@@ -8,7 +8,7 @@ The task is to build an automated guided vehicle or AGV. The vehicle should be a
 
 ### The Team
 ![The team.](https://github.com/zachtyll/E7012E-Mechatronics/blob/master/Team%208%20-%20Line%20Rider.JPG)
-The team consists of Julius Lundberg, Jonathan Myrsell, Ivar Rockström, Alejandro Salvador, Anton Sundström and Zacharias Tyllström. 
+The team consists of Jonathan Myrsell, Ivar Rockström, Julius Lundberg, Anton Sundström Zacharias Tyllström and Alejandro Salvador. 
 
 ### The AGV
 The tasks the team were set out to solve were to design and construct a
