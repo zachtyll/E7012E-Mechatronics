@@ -1,5 +1,5 @@
 # E7012E-Mechatronics: Team Line Riders
-This repository contains work done for the course E7012E - Mechatronics at LTU Spring 2019
+This repository contains work done for the course E7012E - Mechatronics at LTU Spring 2019. A more thorough explanation is found at [the repository pages](https://zachtyll.github.io/E7012E-Mechatronics/).
 
 
 
