@@ -5,7 +5,7 @@ This repository contains work done for the course E7012E - Mechatronics at LTU S
 The task is to build an automated guided vehicle or AGV. The vehicle should be able to follow along a line track without deviating from the line and finish a track within a set time.
 
 ### The Team
-![The team.](/E7012E-Mechatronics/docs/assets/Team 8 - Line Rider.JPG)
+![The team.](/E7012E-Mechatronics/docs/assets/Team 8 - Line Rider.JPG| width=100)
 The team consists of [Jonathan Myrsell](https://www.linkedin.com/in/jonmyr/), [Ivar Rockström](https://www.linkedin.com/in/ivar/), [Julius Lundberg](https://www.linkedin.com/in/julius-lundberg/), [Anton Sundström](https://www.linkedin.com/in/anton-sundstr%C3%B6m-622431194/), [Zacharias Tyllström](https://www.linkedin.com/in/zacharias-tyllstrom/) and [Alejandro Salvador](https://www.linkedin.com/in/alejandro-salvador-cabo-9a6175156/). 
 
 ### The AGV
@@ -26,7 +26,7 @@ The AGV used an [Arduino M0 Pro](https://docs.arduino.cc/retired/boards/arduino-
 
 ### Energy Supply
 The energy was routed to each component as described in the figure below.
-![The energy routing schematic.](/E7012E-Mechatronics/docs/assets/power-schematic.png)
+![The energy routing schematic.](/E7012E-Mechatronics/docs/assets/power-schematic.png| width=100)
 
 ### Automatic Control Software
 The motor speed was regulated by a simple PI controller and used the hall sensors as its input measurement. The sensor array was used to determine the steering angle of the RC car. As this task was more sophisticated a PID controller was used. Several experimental tests were carried out in order to find the best gains for the PID controller.
@@ -35,7 +35,7 @@ An additional feature that was implemented was that the RC car slowed down on ti
 
 ### Decoration
 Due to the teams good humor, it was decided that the RC car shell was too dull and a more thematic hull was designed. Based on the classic game [Line Rider](https://en.wikipedia.org/wiki/Line_Rider). A small character was 3D-printed and a motor was connected to the base of its head in order to allow the prop to turn its head when cornering. Two eyes created from several LED lights accentuated the gaze of the charater. This added flair led to the RC car turning into a crowd favourite. Below is a picture of the RC car in action.
-![RC car dressed with a Line Rider themed shell.](/E7012E-Mechatronics/docs/assets/line-rider.JPG)
+![RC car dressed with a Line Rider themed shell.](/E7012E-Mechatronics/docs/assets/line-rider.JPG| width=100)
 
 ### Results
 The RC car performed adequately and placed on a fourth place in the time trials. Improvements for the future would be to tune the PID for the steering with a stronger theoretical foundation or to switch to a more advanced controller strategy.
