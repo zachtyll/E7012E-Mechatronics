@@ -5,7 +5,7 @@ This repository contains work done for the course E7012E - Mechatronics at LTU S
 The task is to build an automated guided vehicle or AGV. The vehicle should be able to follow along a line track without deviating from the line and finish a track within a set time.
 
 ### The Team
-![The team.](https://github.com/zachtyll/E7012E-Mechatronics/blob/master/Team%208%20-%20Line%20Rider.JPG)
+![The team.](/E7012E-Mechatronics/docs/assets/Team 8 - Line Rider.JPG)
 The team consists of Jonathan Myrsell, Ivar Rockström, Julius Lundberg, Anton Sundström Zacharias Tyllström and Alejandro Salvador. 
 
 ### The AGV
