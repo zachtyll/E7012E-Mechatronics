@@ -6,7 +6,7 @@ The task is to build an automated guided vehicle or AGV. The vehicle should be a
 
 ### The Team
 ![The team.](/E7012E-Mechatronics/docs/assets/Team 8 - Line Rider.JPG)
-The team consists of ![Jonathan Myrsell](https://www.linkedin.com/in/jonmyr/), ![Ivar Rockström](https://www.linkedin.com/in/ivar/), ![Julius Lundberg](https://www.linkedin.com/in/julius-lundberg/), ![Anton Sundström](https://www.linkedin.com/in/anton-sundstr%C3%B6m-622431194/), ![Zacharias Tyllström](https://www.linkedin.com/in/zacharias-tyllstrom/) and ![Alejandro Salvador](https://www.linkedin.com/in/alejandro-salvador-cabo-9a6175156/). 
+The team consists of [Jonathan Myrsell](https://www.linkedin.com/in/jonmyr/), [Ivar Rockström](https://www.linkedin.com/in/ivar/), [Julius Lundberg](https://www.linkedin.com/in/julius-lundberg/), [Anton Sundström](https://www.linkedin.com/in/anton-sundstr%C3%B6m-622431194/), [Zacharias Tyllström](https://www.linkedin.com/in/zacharias-tyllstrom/) and [Alejandro Salvador](https://www.linkedin.com/in/alejandro-salvador-cabo-9a6175156/). 
 
 ### The AGV
 The tasks the team were set out to solve were to design and construct a
